@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "EnterNametoUpdate";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <br /><br />
+            <a href="/Admin/AdminHome" class="list-group-item">Admin Pannel</a>
+            <a href="/Admin/AddProducts" class="list-group-item ">Add Product</a>
+            <a href="/Admin/RemoveProducts" class="list-group-item">Remove Product</a>
+            <a href="/Admin/EnterNametoUpdate" class="list-group-item active">Update Product</a>
+            <a href="/Admin/callCategory" class="list-group-item">Update Category</a>
+        </div>
+    </div>
+    <div class="col-xs-6" style="font-size:25px">
+        <h2> want TO Update Product</h2>
+        <form method="post" action="/Admin/UpdateProducts" enctype="multipart/form-data">
+            <input class="form-control" name="Productname"  type="text" placeholder="" id="productName" style="margin-bottom:6px" />
+          
+            <div style="text-align:center">
+                <input class="form-control" type="submit" value="ADD" id="add" style="min-height:25px;min-width:100px" />
+            </div>
+        </form>
+    </div>
+</div>
+

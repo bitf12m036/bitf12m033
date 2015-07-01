@@ -1,0 +1,269 @@
+﻿@{
+    ViewBag.Title="SignUp";
+    
+}
+
+<div class="container" >
+    <form method="post" action="@Url.Action("Registered","Home")">
+         <div class="row">
+
+             <h2 class="form-signin-heading">Register</h2>
+             <input name="Fname" type="text" id="First Name" placeholder="First Name" required autofocus style="width:300px; height :40px"><br /><br />
+
+             <input  name="Lname"type="text" id="Last Name" placeholder="Last Name" required autofocus style="width:300px; height :40px; "><br /><br />
+            
+             <input name="Email" type="email" id="inputEmail" placeholder="Email" required autofocus style="width:300px; height :40px"><br /><br />
+            
+             <input name="Password" type="password" id="password" placeholder=" PASSWORD" required style="width:300px; height :40px" onkeydown="return validphone(this)"><br /><br />
+
+             <input name="Contact" type="tel" id="telephone" placeholder=" Mobile Number" required style="width:300px; height :40px" onkeydown="return validphone(this)"><br /><br />
+
+
+
+             @*Gender <input type="radio" name="gender" style="width:15px; height :15px;background-color:purple ; margin-left:50px">Male
+             <input type="radio" name="gender" style="width:15px; height :15px;background-color:purple ;margin-left:20px">Female*@
+
+             @*<div class="checkbox">
+                 <label>
+                     <input type="checkbox" value="remember-me"> Remember me
+                 </label>
+
+             </div>*@
+          </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="width:300px">Register</button>
+    </form>
+
+</div>
+
+
+
+@*<html>
+<!--xmlns="http://www.w3.org/1999/xhtml"-->
+<head>
+    <title>sqlHUB|login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/signup.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="~/Content/layout.css" type="text/css" />
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <!-- s3slider -->
+    <script type="text/javascript" src="~/Scripts/jquery.s3slider.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('#featured_slide_').s3Slider({
+                    timeOut: 6000
+                });
+            });
+            function myfunction() {
+                if (document.myform.fname.value == "")
+                    alert("Please fill out the field");
+            }
+
+        </script>
+    <!-- / s3slider -->
+
+
+
+</head>
+<body id="top">
+    <div class="wrapper col1">
+        <div id="header">
+            <div class="fl_left">
+                <h1><a href="home.html">PK SALE POINT</a></h1><br />
+
+            </div>
+            @*<div id="topnav">
+                            <ul>
+                                <li class="active"><a href="login.html">LOG IN</a><span></span></li>
+                                <li>
+                                    <a href="aboutus.html">ABOUT US</a><span></span>
+
+                                </li>
+                                <li><a href="runqueries.html">RUN QUERIEs</a><span></span></li>
+                                <li><a href="tutorial.html">TUTORIAL</a><span></span></li>
+                                <li><a href="home.html">HOME</a><span></span></li>
+                            </ul>
+                </div>
+
+
+            <!-- ####################################################################################################### -->
+            <div class="container" style=" margin-left:70%">
+                <form name="myform" class="form-horizontal" method="get" action="http://localhost:8080/first/Servelet" onsubmit="myfunction()">
+                    <div><!--<img src="y.jpg" style="width:200px;height:70px"/>--></div>
+                    <br /><br /><br /><br /><br />
+                    <div class="row">
+                        <h2 class="form-signin-heading">Sign up</h2>
+                        <input name="fname" type="text" id="First Name" placeholder="First Name" required autofocus style="width:300px; height :40px"><br /><br />
+
+                        <input type="text" id="Last Name" placeholder="Last Name" required autofocus style="width:300px; height :40px; "><br /><br />
+                        <input name="fname" type="text" id="User Name" placeholder="USER NAME" required autofocus style="width:300px; height :40px"><br /><br />
+                        <input type="email" id="inputEmail" placeholder="Email" required autofocus style="width:300px; height :40px"><br /><br />
+                        <input type="password" id="inputPassword" placeholder="Password" required style="width:300px; height :40px"><br /><br />
+                        <input type="tel" id="telephone" placeholder=" Mobile Number" required style="width:300px; height :40px" onkeydown="return validphone(this)"><br /><br />
+
+
+
+                        Gender <input type="radio" name="gender" style="width:15px; height :15px;background-color:purple ; margin-left:50px">Male
+                        <input type="radio" name="gender" style="width:15px; height :15px;background-color:purple ;margin-left:20px">Female
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" style="width:300px">Sign in</button>
+                </form>
+            </div>
+
+
+            @*<script>
+                    function validphone(evt) {
+                        var code = (evt.which) ? evt.which : event.keyCode;
+                        if (charCode > 31 && (charCode < 48 || charCode > 57))
+                            return false;
+                        var str = this.valueOf();
+                        return true;
+                    }
+                </script>
+            <!-- ####################################################################################################### -->
+            <div class="wrapper col5">
+                <div id="footer">
+
+                    <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">PUCIT|BITF12M</a></p>
+                    <br class="clear" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>*@
+
+
+
+
+
+
+
+
+
+@*<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <script src="bootstrap.js"></script>
+
+</head>
+<body style="background-color:darkslategrey;color:#2E3740; font-family:sans-serif">
+    <div class="login">
+        <h2 style="font-family:cursive; font-size:xx-large; font-style:italic;color: #6D7781 ;font-weight:bold; text-align:center; margin-bottom:auto">Register</h2>
+        <form>
+            <input style="background-color:transparent; padding-right:initial; text-align:center ;background-position-x:center" type="text" name="username" placeholder="User Name" />
+            <br />
+            <input style="background-color:transparent ;text-align:center" type="password" name="pwd" placeholder="Password" />
+            <br />
+            <input style="background-color:transparent;text-align:center" type="email" name="email" placeholder="Email" />
+            <div class='agree'>
+                <input style="background-color:transparent;text-align:center" id='agree' name='agree' type='checkbox'>
+                <label for='agree'></label>Accept rules and conditions
+            </div>
+            <input class='animated' type='submit' value='Register'>
+        </form>
+
+    </div>
+
+</body>
+</html>
+
+
+@*<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <script src="bootstrap.js"></script>
+
+</head>
+<body>
+<div class="form">
+
+    <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="signup">
+            <h1>Sign Up for Free</h1>
+
+            <form action="/" method="post">
+
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>
+                            First Name<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Last Name<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Email Address<span class="req">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" />
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Set A Password<span class="req">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off" />
+                </div>
+
+                <button type="submit" class="button button-block" />Get Started</button>
+
+            </form>
+
+        </div>
+
+        <div id="login">
+            <h1>Welcome Back!</h1>
+
+            <form action="/" method="post">
+
+                <div class="field-wrap">
+                    <label>
+                        Email Address<span class="req">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" />
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Password<span class="req">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off" />
+                </div>
+
+                <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+                <button class="button button-block" />Log In</button>
+
+            </form>
+
+        </div>
+
+    </div><!-- tab-content -->
+
+</div> <!-- /form -->
+</body>
+</html>*@

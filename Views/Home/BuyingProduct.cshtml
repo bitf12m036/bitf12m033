@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "BuyingProduct";
+}
+
+@using salePoint.Models; 
+<div>
+    @*@if (Model != null)
+    {
+        foreach (Product  p in Model)
+        {
+            <form method="post" action="/Admin/GoToUpdate" enctype="multipart/form-data">
+                <input type="hidden" class="form-control" name="ProdID" value=@p.ProdID />
+                PRoduct Name : <input name="Productname" type="text" value=@p.Productname placeholder="" id="productName" style="margin-bottom:6px" /><br />
+
+                Price : <input name="ProductPrice" type="text" placeholder="" value=@p.ProductPrice id="ProductPrice" style="margin-bottom:6px" /><br />
+                Image:<input name="ProductImage" type="file" id="image" style="margin-bottom:6px" />
+                
+             
+                Description :<br /><textarea name="ProductDescription" id="textArea" placeholder="description" maxlength="500"></textarea><br />
+                <div style="text-align:center">
+                    <input type="submit" value="ADD" id="add" style="min-height:25px;min-width:100px" />
+                </div>
+            </form>
+        }
+    }*@
+    <form method="post" action="/Home/PlaceOrder">
+        <input class="form-control" type="text" name="Quantity" value="quantity" placeholder="ENTER QUATITY">
+        <input class="form-control" type="submit" name="getorder" placeholder="Get Order">
+    </form>
+
+</div>

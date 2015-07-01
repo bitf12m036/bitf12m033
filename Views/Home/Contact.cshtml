@@ -1,0 +1,103 @@
+﻿!@{
+    ViewBag.Title = "Contact";
+}
+<div class="container col-md-4 col-xs-5">
+    <h2>Contact Us</h2>
+    <form method="post" action="@Url.Action("ContactAdmin","Home")">
+        <div class="form-group">
+            
+            <input class=" form-control" name="Email" type="email" id="inputEmail" placeholder="Email" required autofocus style="width:300px; height :40px"><br /><br />
+
+            <input class=" form-control" name="City" type="text" id="city" placeholder="City" required autofocus style="width:300px; height :40px"><br /><br />
+
+            <input class=" form-control" name="Phone" type="tel" id="telephone" placeholder=" Mobile Number" required style="width:300px; height :40px" onkeydown="return validphone(this)"><br /><br />
+
+            <label for="comment">Message</label>
+            <br/>
+            <textarea  name="Message" class="form-control" rows="5" id="comment"></textarea>
+
+        </div>
+        @*<div class="form-group">
+            <label for="email">Email:</label>
+            <input name="Email" type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+       
+        <div class="form-group">
+            <label for="city">City Name</label>
+            <input name="City" type="text" class="form-control" id="city" placeholder="Enter City">
+        </div>
+        <div class="form-group">
+            <label for="Contact">Contact No.</label>
+            <input name="Phone" type="text" class="form-control" id="contact" placeholder="Enter Contact ">
+        </div>
+        <div class="form-group">
+            <label for="comment">Message</label>
+            <textarea name="Message" class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        @*<div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>*@
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+</div>
+
+
+
+@*<html>
+    <head>
+        <title>@ViewBag.Title</title>
+        <link href="~/Content/bootstrap.css" rel="stylesheet">
+        <script src="~/Scripts/bootstrap.js"></script>
+    </head>
+<body style="background-color:darkslategray">
+    <nav class="navbar navbar-inverse " role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/Home/Index">PK SALE POINT</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav pull-right">
+                <li ><a href="/Home/Index">Home</a></li>
+                <li><a href="/Home/About">About</a></li>
+                <li class="active"><a href="/Home/Contact">Contact</a></li>
+
+                <li><a href="/Home/Login">Login</a></li>
+                <li><a href="/Home/SignUp">Sign Up</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="container col-md-4 col-xs-5">
+        <h2>Contact Us</h2>
+        <form role="form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <label for="city">City Name</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter City">
+            </div>
+            <div class="form-group">
+                <label for="Contact">Contact No.</label>
+                <input type="text" class="form-control" id="contact" placeholder="Enter City">
+            </div>
+            <div class="form-group">
+                <label for="comment">Message</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+    <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    </div>
+
+
+</body>
+</html>>*@

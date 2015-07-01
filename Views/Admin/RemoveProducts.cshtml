@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "RemoveProducts";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <br /><br />
+            <a href="#" class="list-group-item">Admin Pannel</a>
+            <a href="/Admin/AddProducts" class="list-group-item ">Add Product</a>
+            <a href="/Admin/RemoveProducts" class="list-group-item active">Remove Product</a>
+            <a href="/Admin/EnterNametoUpdate" class="list-group-item">Update Product</a>
+            <a href="/Admin/callCategory" class="list-group-item ">Update Category</a>
+        </div>
+    </div>
+    <div class="col-xs-6" style="font-size:25px">
+        <h2>Add Product</h2>
+        <form action="/Admin/RemoveProduct" method="post">
+            PRoduct Name : <input  name="Productname" type="text" placeholder="" id="ProductName" style="margin-bottom:6px" /><br />
+            @*Price : <input type="text" placeholder="" id="authorName" style="margin-bottom:6px" /><br />
+    <input type="text" placeholder="select an image" id="image" style="margin-bottom:6px" />
+    <button id="imageBrowse" style="margin-bottom:6px; min-height:25px ;min-width:100px">browse</button><br />
+
+    Description :<br /><textarea id="textArea" placeholder="description" maxlength="500"></textarea><br />*@
+            <div style="text-align:center">
+                <input type="submit" value="remove" id="remove" style="min-height:25px;min-width:100px" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

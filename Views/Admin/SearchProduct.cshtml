@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "SearchProduct";
+}
+@using salePoint.Models;
+<div class="row">
+
+    @foreach (Product v in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+         
+            <div class="thumbnail">
+                <img src="@(v.ProductImage)" alt="" id="1-img" class="imgs">
+                <div class="caption">
+
+                    <h4 class="pull-right"><span id="1-p">{@v.ProductPrice}</span></h4>
+
+                    <h4>
+                        <a href="#">{@v.Productname}</a>
+                    </h4>
+
+                    <p>@v.ProductDescription</p>
+                    <form action="/Home/Login"> <input type="submit" name="Buy" value="Buy Now" /></form>
+                </div>
+            </div>
+
+
+        </div>
+    }
+</div>

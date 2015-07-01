@@ -1,0 +1,92 @@
+﻿@using salePoint.Models;
+<!--Ads Here-->
+
+<div class="row">
+    @foreach (Product v in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="col-md-9">
+                <div class="row carousel-holder">
+                    <div class="thumbnail">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                @{
+                                    string[] split1 = @v.ProductImage.Split('-');
+                                    string[] split2 = @split1[1].Split('.');
+                                 }
+                                @{ string[] s1 = new string[3];
+                                }
+                                @for (int i = int.Parse(split2[0]); i > -1; i--)
+                                {
+                                    s1[i] = split1[0] + '-' + i + '.' + split2[1];
+                                    @*<div class="item">
+                                            <img class="slide-image" src="@s1" alt="">
+                                        </div>*@
+                                }
+                                <div class="item active">
+                                    <img class="slide-image" src="@s1[0]" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="@s1[1]" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="@s1[2]" alt="">
+                                </div>
+
+                                @*@for (int i = int.Parse(split2[0]); i > -1; i--)
+                                    {
+                                        string s1 = split1[0] + '-' + i + '.' + split2[1];
+                                        <div class="item">
+                                            <img class="slide-image" src="@s1" alt="">
+                                        </div>
+                                    }*@
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                        @*<div class="carousel-inner">
+                                    <div class="item active">
+                                        <img class="slide-image" src="@(v.ProductImage)" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="@(v.ProductImage)" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="@(v.ProductImage)" alt="">
+                                    </div>
+
+                                </div>
+
+                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>*@
+                        @*<img src="@(v.ProductImage)" alt="" id="1-img" >*@
+                        <div class="caption">
+
+                            <h4 class="pull-right"><span id="1-p">@v.ProductPrice</span></h4>
+                            <h4>
+                                <a href="#">@v.Productname</a>
+                            </h4>
+                            <p>@v.ProductDescription</p>
+                            <form action="/Home/Login"> <input type="submit" name="Buy" value="Buy Now" onclick="Myfunctions()" /></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

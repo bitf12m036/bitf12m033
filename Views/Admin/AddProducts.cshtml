@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+
+ }    
+
+
+
+   
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <br /><br />
+                <a href="/Admin/AdminHome" class="list-group-item">Admin Pannel</a>
+                <a href="/Admin/AddProducts" class="list-group-item active">Add Product</a>
+                <a href="/Admin/RemoveProducts" class="list-group-item">Remove Product</a>
+                <a href="/Admin/EnterNametoUpdate" class="list-group-item ">Update Product</a>
+                <a href="/Admin/callCategory" class="list-group-item ">Update Category</a>
+            </div>
+        </div>
+        <div class="col-xs-6" style="font-size:25px" >
+            @*<h2>Add Product</h2>*@
+            <form  method="post" action="/Admin/SaveProduct" enctype="multipart/form-data">
+                <input class="form-control" name="Productname" type="text" placeholder="Product name" id="productName" style="margin-bottom:6px;background-color:#0e2c14" />
+               
+                <input class="form-control" name="ProductPrice" type="text" placeholder="Price" id="ProductPrice" style="margin-bottom:6px" /><br />
+                <input class="form-control" name="ProductImage" type="file" id="image" style="margin-bottom:6px" />
+                <input class="form-control" name="ProductImage" type="file" id="image1" style="margin-bottom:6px" />
+                <input class="form-control" name="ProductImage" type="file" id="image2" style="margin-bottom:6px" />
+                @*<input type="file"  id="imageBrowse" style="margin-bottom:6px; min-height:25px ;min-width:100px"/>browse<br />*@
+                @*<input type="text" placeholder="link" id="link" style="margin-bottom:6px" />*@
+                <br /><textarea class="form-control" name="ProductDescription" id="textArea" placeholder="description" maxlength="500"></textarea><br />
+                <div style="text-align:center">
+                    <input type="submit" value="ADD" id="add" style="min-height:25px;min-width:100px" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    

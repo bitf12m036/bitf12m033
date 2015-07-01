@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "UpdateProducts";
+}
+
+@using salePoint.Models;
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="list-group">
+            <br /><br />
+            <a href="/Admin/AdminHome" class="list-group-item">Admin Pannel</a>
+            <a href="/Admin/AddProducts" class="list-group-item ">Add Product</a>
+            <a href="/Admin/RemoveProducts" class="list-group-item">Remove Product</a>
+            <a href="/Admin/EnterNametoUpdate" class="list-group-item active">Update Product</a>
+
+        </div>
+    </div>
+    <div class="col-xs-6" style="font-size:25px">
+        <h2>Update Product</h2>
+        @if(Model != null) { 
+            foreach(Product p in Model)
+            {
+                <form method="post" action="/Admin/GoToUpdate" enctype="multipart/form-data">
+                    <input type="hidden" class="form-control" name="ProdID" value=@p.ProdID />
+                    <input class="form-control" name="Productname" type="text" value=@p.Productname placeholder="" id="productName" style="margin-bottom:6px" /><br />
+
+                    <input name="ProductPrice" class="form-control" type="text" placeholder="" value=@p.ProductPrice id="ProductPrice" style="margin-bottom:6px" /><br />
+                   @*<input name="ProductImage" type="file" id="image" style="margin-bottom:6px" />*@
+                    @*<input type="file"  id="imageBrowse" style="margin-bottom:6px; min-height:25px ;min-width:100px"/>browse<br />*@
+                    @*<input type="text" placeholder="link" id="link" style="margin-bottom:6px" />*@
+                    @*Description :<br /><textarea class="form-control" name="ProductDescription" id="textArea" placeholder="description" maxlength="500"></textarea><br />*@
+                    <div style="text-align:center">
+                        <input type="submit" value="ADD" id="add" style="min-height:25px;min-width:100px" />
+                    </div>
+                </form>
+            }
+        }
+    </div>
+</div>
+

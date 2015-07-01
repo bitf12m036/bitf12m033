@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container" style=" margin-left:20%; margin-top:0%">
+
+    <form name="myform" class="form-horizontal" method="post" action="/Home/gttingLog" onsubmit="myfunction()">
+
+        <div class="row">
+
+
+            <br /><br /><br /><br /><br />
+            <h2 class="form-signin-heading">Log   In</h2>
+            <input name="Email" type="email" id="User Name" placeholder="Email" required autofocus style="width:300px; height :40px" /><br /><br />
+            <input name="Password"  type="password" id="inputPassword" placeholder="Password" required style="width:300px; height :40px" /><br /><br />
+            <button class="btn btn-lg btn-primary btn-block" type="submit" style="width:300px">Log in</button>
+        </div>
+    </form>
+    <br />
+    <a href="/Home/SignUp">Create new acount </a>
+
+</div>
+
+
+    @*<html>
+        <!--xmlns="http://www.w3.org/1999/xhtml"-->
+        <head>
+            <title>sqlHUB|login</title>
+            <link href="~/Content/bootstrap.css" rel="stylesheet" />
+            <script src="~/Scripts/bootstrap.js"></script>
+            <link href="~/Content/signup.css" rel="stylesheet" />
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+            <link rel="stylesheet" href="~/Content/layout.css" type="text/css" />
+            <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+            <!-- s3slider -->
+            <script type="text/javascript" src="~/Scripts/jquery.s3slider.js"></script>
+        </head>
+        <body>
+            <div class="wrapper col1">
+                <div id="header">
+                    <div class="fl_left">
+                        <h1 style="background-color:transparent"><a href="home.html">PK SALE POINT</a></h1><br />
+
+                    </div>
+
+
+                    @*<div id="topnav">
+                            <ul>
+                                <li class="active"><a href="login.html">LOG IN</a><span></span></li>
+                                <li>
+                                    <a href="aboutus.html">ABOUT US</a><span></span>
+
+                                </li>
+                                <li><a href="runqueries.html">RUN QUERIEs</a><span></span></li>
+                                <li><a href="tutorial.html">TUTORIAL</a><span></span></li>
+                                <li><a href="home.html">HOME</a><span></span></li>
+                            </ul>
+                        </div>
+
+                    <div class="fl_left">
+                            <h1><a href="home.html">SQL HUB</a></h1><br />
+
+                        </div>
+                    <!-- *****************-->
+
+                    <div class="container" style=" margin-left:70%">
+                        <form name="myform" class="form-horizontal" method="get" action="/Home/callAdmin" onsubmit="myfunction()">
+                            <div></div><br /><br /><br />
+                            <div class="row">
+
+
+                                 <br /><br /><br /><br /><br /><br /><br />
+                                <h2 class="form-signin-heading">Log   In</h2>
+                                <input name="fname" type="text" id="User Name" placeholder="USER NAME" required autofocus style="width:300px; height :40px" /><br /><br />
+                                <input type="password" id="inputPassword" placeholder="Password" required style="width:300px; height :40px" /><br /><br />
+                                <button class="btn btn-lg btn-primary btn-block" type="submit" style="width:300px">Log in</button>
+                            </div>
+                        </form>
+                        <br />
+                        <a href="/Home/SignUp">Create new acount </a>
+                    </div>
+
+                    <br class="clear" />
+                </div>
+            </div>
+            <!-- ####################################################################################################### -->
+            <!-- ####################################################################################################### -->
+            <div class="wrapper col5">
+                <div id="footer">
+
+                    <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="www.facebook.com\umer.awaan.2014">Umer Awan</a></p>
+                    <br class="clear" />
+                </div>
+            </div>
+        </body>
+        </html>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<!DOCTYPE html>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <title>@ViewBag.Title</title>
+            <link href="bootstrap.css" rel="stylesheet">
+            <script src="bootstrap.js"></script>
+
+        </head>
+        <body>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong class="">Login</strong>
+
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-3 col-sm-9">
+                                            <div class="checkbox">
+                                                <label class="">
+                                                    <input type="checkbox" class="">Remember me
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group last">
+                                        <div class="col-sm-offset-3 col-sm-9">
+                                            <button type="submit" class="btn btn-success btn-sm">Sign in</button>
+                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="panel-footer">
+                                Not Registered? <a href="#" class="">Register here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+        </html>*@
